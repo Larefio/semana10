@@ -6,16 +6,17 @@ si es mayor que 1 y no tiene divisores aparte de 1 y él mismo.
 // function primo(n) {
 //   if (n <= 1) return false;
 
-//   for (let i = 2; i < n; i++) {
-//     if (n % i === 0) return false;
+//   let contador = 0;
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0) {
+//       contador++;
+//     }
 //   }
 
-//   return true;
+//   return contador === 2;
 // }
-
-
-
-
+// //Me falta un contador
 
 /*
  Crea una función que calcule la diferencia entre el número más grande y el más 
@@ -43,10 +44,6 @@ si es mayor que 1 y no tiene divisores aparte de 1 y él mismo.
 
 // console.log(diferencia(numeros)); // resultado 8 por la resta de el mayor y menos (9-1)
 
-
-
-
-
 /* El sistema debe calcular la propina de una cuenta en un restaurante. Si el total 
 de la cuenta es mayor a 50, se aplica una propina del 15%. Si es menor o igual a 
 50, se aplica una propina del 10%. 
@@ -70,9 +67,6 @@ de la cuenta es mayor a 50, se aplica una propina del 15%. Si es menor o igual a
 
 // alert("La propina es: " + propina);
 
-
-
-
 /*En un sistema de autenticación de usuarios, se requiere verificar si las 
 credenciales ingresadas coinciden con las almacenadas. Si son correctas, el 
 usuario obtiene acceso; si no, debe intentar de nuevo hasta un máximo de 3 
@@ -82,7 +76,6 @@ const usuariosRegistrados = [
 { usuario: "user", contrasena: "abcd" }  
 ]; 
  */
-
 
 // const usuariosRegistrados = [
 //   { usuario: "admin", contrasena: "1234" },
@@ -118,8 +111,6 @@ const usuariosRegistrados = [
 //   alert("Acceso denegado ");
 // }
 
-
-
 /*Tienes un arreglo con las edades de un grupo de personas. El sistema necesita 
 contar cuántas personas son menores de edad (menores de 18 años) y cuántas 
 son adultas.  
@@ -148,7 +139,6 @@ let edades = [12, 18, 25, 15, 30, 17];
 // console.log("Menores:", resultado.menores);
 // console.log("Adultos:", resultado.adultos);
 
-
 /*
 En un restaurante, los pedidos se gestionan a través de un sistema en línea. 
 Cada cliente realiza un pedido que contiene múltiples platos. Cada plato tiene 
@@ -162,6 +152,11 @@ let pedido = [
 { nombre: "Ensalada", precio: 20 }  
 ];
  */
+// let pedido = [
+// { nombre: "Pizza", precio: 40 },
+// { nombre: "Pasta", precio: 50 },
+// { nombre: "Ensalada", precio: 20 }
+// ];
 
 // function calcularTotal(pedido) {
 //   let total = 0;
@@ -186,8 +181,6 @@ let pedido = [
 
 // console.log(calcularTotal(pedido));
 
-
-
 /*
 En una sala de seguridad, se permite el acceso solo a los empleados que hayan 
 autenticado correctamente. El sistema de acceso recibe una contraseña y 
@@ -197,7 +190,6 @@ bloqueado por seguridad.
 let contraseñasValidas = ["admin123", "empleado456", "jefe789"] 
 
 */
-
 
 // let contraseñasValidas = ["admin123", "empleado456", "jefe789"];
 
@@ -224,8 +216,6 @@ let contraseñasValidas = ["admin123", "empleado456", "jefe789"]
 // } else {
 //   alert("Acceso bloqueado");
 // }
-
-
 
 /*El sistema necesita validar si una contraseña es segura. Para que la contraseña 
 sea válida, debe tener al menos 8 caracteres, contener al menos una letra 
@@ -260,8 +250,7 @@ Contraseña = "Password123"
 
 // let contraseña = "Password123";
 
-// console.log(esSegura(contraseña)); //-> La contraseña viene a ser verdadera :) 
-
+// console.log(esSegura(contraseña)); //-> La contraseña viene a ser verdadera :)
 
 /*
 Un sistema de reservas en línea para un hotel necesita verificar si hay 
@@ -274,11 +263,11 @@ let habitacionesDisponibles = [
 
 */
 
-// let habitacionesDisponibles = [  
-// { numero: 101, disponible: true },  
-// { numero: 102, disponible: false },  
-// { numero: 103, disponible: true } 
-// ];  
+// let habitacionesDisponibles = [
+// { numero: 101, disponible: true },
+// { numero: 102, disponible: false },
+// { numero: 103, disponible: true }
+// ];
 
 // function buscarHabitacion(lista) {
 //   let encontrada = false;
@@ -296,8 +285,6 @@ let habitacionesDisponibles = [
 // }
 
 // buscarHabitacion(habitacionesDisponibles);
-
-
 
 /*
 El sistema debe verificar si el código de promoción ingresado es válido. Los 
@@ -321,8 +308,6 @@ códigos válidos son: "PROMO10", "DESCUENTO20", y "AHORRO30".
 // } else {
 //   console.log("Código inválido ");
 // }
-
-
 
 /*En una aerolínea, el sistema de reservas debe verificar si hay asientos 
 disponibles para un vuelo en una fecha específica.  
@@ -366,9 +351,6 @@ let vuelos = [
 //   console.log("No hay vuelos disponibles");
 // }
 
-
-
-
 /*
 Un profesor necesita un programa que: reciba 5 notas, calcule el promedio e 
 indique si el alumno aprobó (>= 13) o desaprobó. 
@@ -394,9 +376,6 @@ indique si el alumno aprobó (>= 13) o desaprobó.
 
 // evaluarAlumno(notas);
 
-
-
-
 /*
  En un Cajero automático Un usuario tiene S/1500, debe poder retirar dinero. Si 
 intenta retirar más de lo disponible, mostrar “Fondos insuficientes”. 
@@ -405,7 +384,7 @@ intenta retirar más de lo disponible, mostrar “Fondos insuficientes”.
 
 // let saldo = 1500;
 
-// let retiro = 800; 
+// let retiro = 800;
 // if (retiro > saldo) {
 //   console.log("Fondos insuficientes");
 // } else {
@@ -414,15 +393,12 @@ intenta retirar más de lo disponible, mostrar “Fondos insuficientes”.
 //   console.log("Nuevo saldo:", saldo);
 // }
 
-
-
 /*
 Para un Inventario de productos, tienes un array de productos y debes mostrar 
 cuáles tienen stock menor a 5. 
 
 let stock = [10, 2, 7, 1, 15]; 
  */
-
 
 // function productosBajoStock(arr) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -436,8 +412,6 @@ let stock = [10, 2, 7, 1, 15];
 
 // productosBajoStock(stock);
 
-
-
 /*
 En un Sistema de descuentos, una tienda aplica: 20% si compra supera 500, 10% 
 si supera 200, caso contrario sin descuento. 
@@ -448,10 +422,10 @@ si supera 200, caso contrario sin descuento.
 
 //   if (total > 500) {
 //     descuento = total * 0.20;
-//   } 
+//   }
 //   else if (total > 200) {
 //     descuento = total * 0.10;
-//   } 
+//   }
 //   else {
 //     descuento = 0;
 //   }
@@ -464,9 +438,6 @@ si supera 200, caso contrario sin descuento.
 // let compra = 650;
 
 // console.log(calcularDescuento(compra));
-
-
-
 
 /*
 Sistema de votación, contar votos para el candidato A y candidato B. 
@@ -493,9 +464,6 @@ let votos = ["A", "B", "A", "A", "B"];
 
 // contarVotos(votos);
 
-
-
-
 /*
 Calcular el total de productos y agregar IGV. 
 let productos = [50, 80, 100, 130, 190];
@@ -520,5 +488,3 @@ let productos = [50, 80, 100, 130, 190];
 // let productos = [50, 80, 100, 130, 190];
 
 // calcularTotalConIGV(productos);
-
-
